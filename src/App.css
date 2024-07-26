@@ -1,26 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
 .App {
   text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
 }
 
-.app-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1, h2 {
+  color: blanchedalmond;
+  font-size: 2.1rem;
+}
+
+body {
+  font-family: 'Pacifico', cursive;
 }
 
 .task-card {
-  border: 1px solid #ccc;
+  border: 1px solid transparent;
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 0.5);
   width: 40%;
   margin-left: auto;
   margin-right: auto;
@@ -35,6 +37,8 @@
 
 .task-title.completed {
   text-decoration: line-through;
+  text-decoration-thickness: 3px;
+
 }
 
 .task-buttons {
@@ -57,51 +61,96 @@
 }
 
 .task-buttons .complete-button {
-  background-color: blue;
-  color: white;
+  background-color: #40E0D0;
+  color: black;
+  font-family: 'Pacifico', cursive;
+  font-size: 14px;
 }
 
 .task-buttons .complete-button:hover {
-  background-color: darkblue;
+  background-color: #1b9d90;
 }
 
 .task-buttons .invalidate-button {
-  background-color: yellow;
+  background-color: #FFFF00;
   color: black;
+  font-family: 'Pacifico', cursive;
+  font-size: 14px;
 }
 
 .task-buttons .invalidate-button:hover {
-  background-color: gold;
+  background-color: #c4c416;
 }
 
 .task-buttons .delete-button {
-  background-color: red;
-  color: white;
+  background-color: #FFBF00;
+  color: black;
+  font-family: 'Pacifico', cursive;
+  font-size: 14px;
 }
 
 .task-buttons .delete-button:hover {
-  background-color: darkred;
+  background-color: #b48b13;
 }
 
 .task-form {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+}
+
+.task-form button {
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  background-color: #BFFF00;
+  color: black;
+  font-family: 'Pacifico', cursive;
+}
+
+.task-form button:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgb(74, 166, 13);
 }
 
 .task-form input {
+  flex-grow: 1;
   margin-right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .container {
-  width: 100%;
+  background-image: url('./assets/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .signature {
-  position: absolute;
-  bottom: 10px;
+  position: relative;
+  margin-top: auto;
+  bottom: 0;
   width: 100%;
   text-align: center;
   color: black;
-  font-size: 1em;
+  padding: 10px 0;
+  font-size: 1rem;
 }
