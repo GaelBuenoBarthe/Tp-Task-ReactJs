@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import TaskForm from './components/TaskForm';
+import TaskList from './components/TaskList';
 import './App.css';
+import Signature from './components/Signature';
 
-function App() {
+const App = () => {
+  const [tasks, setTasks] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+        <h1>DigiTâches</h1>
+        <h2>Votre application de gestion de tâches</h2>
+      </div>
+      <TaskForm tasks={tasks} setTasks={setTasks} />
+      <TaskList tasks={tasks} setTasks={setTasks} />
+      <Signature />
     </div>
   );
-}
+};
 
 export default App;
