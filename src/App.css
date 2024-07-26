@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .App {
   text-align: center;
 }
 
-.App-header {
+.app-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -31,9 +33,60 @@
   flex-grow: 1;
 }
 
+.task-title.completed {
+  text-decoration: line-through;
+}
+
 .task-buttons {
   display: flex;
   gap: 10px;
+}
+
+.task-buttons button {
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.task-buttons button:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.task-buttons .complete-button {
+  background-color: blue;
+  color: white;
+}
+
+.task-buttons .complete-button:hover {
+  background-color: darkblue;
+}
+
+.task-buttons .invalidate-button {
+  background-color: yellow;
+  color: black;
+}
+
+.task-buttons .invalidate-button:hover {
+  background-color: gold;
+}
+
+.task-buttons .delete-button {
+  background-color: red;
+  color: white;
+}
+
+.task-buttons .delete-button:hover {
+  background-color: darkred;
+}
+
+.task-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .task-form input {

@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+      <div style={{ textAlign: 'center', marginBottom: '150px' }}>
         <h1>DigiTâches</h1>
         <h2>Votre application de gestion de tâches</h2>
       </div>

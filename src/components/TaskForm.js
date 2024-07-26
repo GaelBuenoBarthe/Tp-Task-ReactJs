@@ -2,27 +2,25 @@ import React, { useState } from 'react';
 
 
 const TaskForm = ({ tasks, setTasks }) => {
-  const [task, setTask] = useState('');
+    const [task, setTask] = useState('');
 
-  const addTask = (e) => {
-    e.preventDefault();
-    if (task.trim()) {
-      setTasks([...tasks, { title: task, completed: false }]);
-      setTask('');
-    }
-  };
+    const addTask = (e) => {
+        e.preventDefault();
+        if (task.trim()) {
+            setTasks([...tasks, { title: task, completed: false }]);
+            setTask('');
+        }
+    };
 
-  return (
-    <form className="task-form" onSubmit={addTask}>
-      <input
-        type="text"
-        value={task}
-        onChange={(e) => setTask(e.target.value)}
-        placeholder="Ajouter une tâche"
-      />
-      <button type="submit">Ajouter une tâche</button>
-    </form>
-  );
+    return (
+        <form className="task-form" onSubmit={addTask}>
+            <input type="text"
+            value={task}
+            onChange={(e) => setTask(e.target.value)}
+            placeholder="Ajouter une tâche"/>
+            <button type="submit">Ajouter une tâche</button>
+        </form>
+    );
 };
 
 export default TaskForm;
